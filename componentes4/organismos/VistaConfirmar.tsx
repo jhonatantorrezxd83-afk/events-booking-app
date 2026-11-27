@@ -51,6 +51,10 @@ export default function VistaConfirmar() {
           solicitud,
         }),
       });
+
+      const puntosActuales = Number(localStorage.getItem("loyalty_points") || "850");
+      localStorage.setItem("loyalty_points", String(puntosActuales + 100));
+
       setMostrarModal(true);
     } catch (err) {
       console.error("Error guardando reserva:", err);

@@ -16,6 +16,18 @@ export default function VistaHome() {
   const [reclamado, setReclamado] = useState(false);
 
   useEffect(() => {
+    const puntosGuardados = localStorage.getItem("loyalty_points");
+    if (puntosGuardados) {
+      setPuntos(Number(puntosGuardados));
+    } else {
+      localStorage.setItem("loyalty_points", "850");
+    }
+
+    const claimGuardado = localStorage.getItem("claim_usado");
+    if (claimGuardado === "true") {
+      setReclamado(true);
+    }
+
     fetch(`${API_URL}/eventos`)
       .then((res) => res.json())
       .then((data) => {
@@ -27,8 +39,11 @@ export default function VistaHome() {
 
   const handleClaim = () => {
     if (!reclamado) {
-      setPuntos((prev) => prev + 50);
+      const nuevosPuntos = puntos + 50;
+      setPuntos(nuevosPuntos);
       setReclamado(true);
+      localStorage.setItem("loyalty_points", String(nuevosPuntos));
+      localStorage.setItem("claim_usado", "true");
     }
   };
 
