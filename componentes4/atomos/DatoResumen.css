@@ -1,0 +1,17 @@
+.dato-resumen {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dato-resumen__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #222222;
+}
+
+.dato-resumen__valor {
+  font-size: 13px;
+  color: #777777;
+  line-height: 1.45;
+}

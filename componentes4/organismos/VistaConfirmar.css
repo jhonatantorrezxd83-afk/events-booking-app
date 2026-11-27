@@ -1,0 +1,49 @@
+.vista-confirmar {
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding: 18px 16px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.vista-confirmar__volver {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #111111;
+  align-self: flex-start;
+  margin-bottom: 10px;
+}
+
+.vista-confirmar__titulo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.vista-confirmar__subtitulo {
+  font-size: 12px;
+  color: #666666;
+  margin-top: 6px;
+}
+
+.vista-confirmar__detalles {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px 0 28px;
+  flex: 1;
+}
+
+.vista-confirmar__seccion {
+  font-size: 16px;
+  font-weight: 700;
+  color: #555555;
+}
+
+.vista-confirmar__acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

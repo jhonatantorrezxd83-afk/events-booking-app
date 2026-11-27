@@ -1,0 +1,11 @@
+.boton-secundario {
+  width: 100%;
+  background-color: #ffffff;
+  color: #3b0a75;
+  border: 1.5px solid #3b0a75;
+  border-radius: 6px;
+  padding: 13px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}

@@ -1,0 +1,71 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 50;
+}
+
+.modal-puntos {
+  width: 100%;
+  max-width: 340px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  padding-bottom: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.modal-puntos__cerrar {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #3b0a75;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-puntos__banner {
+  background: radial-gradient(circle at top, #fff5d6 0%, #ffffff 75%);
+  padding: 36px 20px 16px;
+  font-size: 56px;
+}
+
+.modal-puntos__cuerpo {
+  padding: 0 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-puntos__titulo {
+  font-size: 32px;
+  font-weight: 800;
+  color: #111111;
+}
+
+.modal-puntos__titulo span {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.modal-puntos__texto {
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.45;
+  margin-bottom: 8px;
+}
