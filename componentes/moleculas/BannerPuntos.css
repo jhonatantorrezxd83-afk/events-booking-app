@@ -1,0 +1,86 @@
+.banner-wrapper {
+  padding: 6px 16px 14px;
+}
+
+.banner-puntos {
+  background: linear-gradient(135deg, #3b0a75 0%, #6d28d9 50%, #3b0a75 100%);
+  border-radius: 16px;
+  padding: 18px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.banner-puntos__superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-puntos__etiqueta {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.banner-puntos__valor {
+  font-size: 32px;
+  font-weight: 800;
+  margin-top: 2px;
+}
+
+.banner-puntos__valor span {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.banner-puntos__regalo {
+  font-size: 46px;
+}
+
+.banner-puntos__subtitulo {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.banner-puntos__caja-claim {
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.banner-puntos__free {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.banner-puntos__tiempo {
+  font-size: 11px;
+  opacity: 0.85;
+  margin-top: 3px;
+}
+
+.banner-indicadores {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.banner-indicadores__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+}
+
+.banner-indicadores__dot--activo {
+  background-color: transparent;
+  border: 2px solid #3b0a75;
+  width: 10px;
+  height: 10px;
+}

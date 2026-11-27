@@ -1,0 +1,16 @@
+.boton-claim {
+  background-color: #ffffff;
+  color: #3b0a75;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.boton-claim:disabled {
+  opacity: 0.6;
+  cursor: default;
+}

@@ -1,0 +1,44 @@
+.cabecera-usuario {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 16px 12px;
+}
+
+.cabecera-usuario__izq {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.cabecera-usuario__saludo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.cabecera-usuario__der {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cabecera-usuario__campana {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.cabecera-usuario__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #f9d8a7;
+  border: 2px solid #e0a96d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}

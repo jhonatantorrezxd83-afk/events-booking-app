@@ -1,0 +1,11 @@
+.badge-puntos {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #ff7eb3 0%, #9b72cb 100%);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+}

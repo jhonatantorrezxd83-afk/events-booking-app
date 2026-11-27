@@ -1,0 +1,11 @@
+.vista-home {
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.vista-home__contenido {
+  flex: 1;
+  padding-bottom: 16px;
+}
