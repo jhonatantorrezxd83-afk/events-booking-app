@@ -45,20 +45,40 @@ export default function TarjetaEvento({ evento }: TarjetaEventoProps) {
           onClick={() => setFavorito(!favorito)}
           aria-label="Guardar"
         >
-          {favorito ? "❤️" : "🤍"}
+          <img
+            src={favorito ? "/heartrojo.svg" : "/heart.svg"}
+            alt="Favorito"
+            width={16}
+            height={16}
+          />
         </button>
       </div>
 
       <Link href={`/detalle?${query}`}>
         <div className="tarjeta-evento__fila-titulo">
           <h3 className="tarjeta-evento__titulo">{evento.titulo}</h3>
-          <span className="tarjeta-evento__rating">⭐ {evento.rating}</span>
+          <span
+            className="tarjeta-evento__rating"
+            style={{ display: "flex", alignItems: "center", gap: 4 }}
+          >
+            <img src="/estrella.svg" alt="Rating" width={13} height={13} />
+            {evento.rating}
+          </span>
         </div>
-        <p className="tarjeta-evento__meta">📍 {evento.ubicacion}</p>
+        <p className="tarjeta-evento__meta">
+          <img src="/location.svg" alt="Ubicación" width={12} height={12} />
+          <span>{evento.ubicacion}</span>
+        </p>
         {evento.fecha && (
           <p className="tarjeta-evento__meta">
-            <span>📅 {evento.fecha}</span>
-            <span>🕒 {evento.hora}</span>
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 4 }}>
+              <img src="/calendar.svg" alt="Fecha" width={12} height={12} />
+              {evento.fecha}
+            </span>
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 4 }}>
+              <img src="/clock.svg" alt="Hora" width={12} height={12} />
+              {evento.hora}
+            </span>
           </p>
         )}
       </Link>

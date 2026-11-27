@@ -16,25 +16,25 @@ export default function SeccionMapaContacto({ titulo }: SeccionMapaContactoProps
       </p>
 
       <div className="mapa-contacto__mapa">
-        <iframe
-          title="Mapa de ubicación"
-          className="mapa-contacto__iframe"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=-0.135%2C51.508%2C-0.125%2C51.514&layer=mapnik"
+        <img
+          src="/mapa.png"
+          alt="Mapa de ubicación"
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
         <span className="mapa-contacto__badge">⌖ View Map Larger</span>
       </div>
 
       <div className="mapa-contacto__lista">
         <div className="mapa-contacto__item">
-          <span>📍</span>
+          <img src="/ubicacion_morado.svg" alt="Dirección" width={16} height={16} />
           <span>Get Directions</span>
         </div>
         <div className="mapa-contacto__item">
-          <span>📞</span>
+          <img src="/telefono_morado.svg" alt="Teléfono" width={16} height={16} />
           <span>+34 213 00 68 94</span>
         </div>
         <div className="mapa-contacto__item">
-          <span>🌐</span>
+          <img src="/mundo.svg" alt="Web" width={16} height={16} />
           <span>http://leceisterkitchen.com?</span>
         </div>
       </div>

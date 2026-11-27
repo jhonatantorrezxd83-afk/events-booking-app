@@ -15,9 +15,7 @@ export default function VistaConfirmar() {
 
   const titulo = params.get("titulo") || "Leceister Square kitchen";
   const ubicacion = params.get("ubicacion") || "31-36 Leicester Square, England";
-  const imagen =
-    params.get("imagen") ||
-    "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80";
+  const imagen = params.get("imagen") || "/comida.png";
   const invitados = params.get("invitados") || "2 Guests";
   const fecha = params.get("fecha") || "Wed, July 18";
 
@@ -36,7 +34,7 @@ export default function VistaConfirmar() {
         onClick={() => router.back()}
         aria-label="Volver"
       >
-        ‹
+        <img src="/flecha.svg" alt="Volver" width={18} height={18} />
       </button>
 
       <h1 className="vista-confirmar__titulo">Reservation Preview</h1>

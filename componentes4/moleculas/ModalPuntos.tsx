@@ -19,10 +19,23 @@ export default function ModalPuntos({
           onClick={onCerrar}
           aria-label="Cerrar"
         >
-          ✕
+          <img src="/boton X.svg" alt="Cerrar" width={14} height={14} />
         </button>
 
-        <div className="modal-puntos__banner">🎉 🏅 🎊</div>
+        <div
+          className="modal-puntos__banner"
+          style={{
+            backgroundImage: 'url("/confeti.png")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: 150,
+          }}
+        >
+          <img src="/medalla.svg" alt="Medalla" width={72} height={72} />
+        </div>
 
         <div className="modal-puntos__cuerpo">
           <h2 className="modal-puntos__titulo">

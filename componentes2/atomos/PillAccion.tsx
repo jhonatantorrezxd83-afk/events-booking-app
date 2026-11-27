@@ -10,7 +10,7 @@ interface PillAccionProps {
 export default function PillAccion({ icono, texto, onClick }: PillAccionProps) {
   return (
     <button className="pill-accion" onClick={onClick}>
-      <span>{icono}</span>
+      <img src={icono} alt={texto} width={15} height={15} />
       <span>{texto}</span>
     </button>
   );

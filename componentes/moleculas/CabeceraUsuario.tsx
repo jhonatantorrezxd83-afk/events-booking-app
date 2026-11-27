@@ -14,9 +14,15 @@ export default function CabeceraUsuario({ puntos }: CabeceraUsuarioProps) {
       </div>
       <div className="cabecera-usuario__der">
         <button className="cabecera-usuario__campana" aria-label="Notificaciones">
-          🔔
+          <img src="/campana.svg" alt="Notificaciones" width={22} height={22} />
         </button>
-        <div className="cabecera-usuario__avatar">🧑🏽</div>
+        <div className="cabecera-usuario__avatar" style={{ overflow: "hidden" }}>
+          <img
+            src="/Ellipse 1.png"
+            alt="Usuario"
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          />
+        </div>
       </div>
     </header>
   );

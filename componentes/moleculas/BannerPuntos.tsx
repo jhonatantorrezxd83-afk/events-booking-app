@@ -23,7 +23,7 @@ export default function BannerPuntos({
               {puntos} <span>Pts</span>
             </p>
           </div>
-          <span className="banner-puntos__regalo">🎁</span>
+          <img src="/regalo.svg" alt="Regalo" width={54} height={54} />
         </div>
 
         <p className="banner-puntos__subtitulo">

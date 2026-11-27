@@ -26,9 +26,7 @@ export default function VistaDetalle() {
 
   const titulo = params.get("titulo") || "Leceister Square kitchen";
   const ubicacion = params.get("ubicacion") || "31-36 Leicester Square, England";
-  const imagen =
-    params.get("imagen") ||
-    "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80";
+  const imagen = params.get("imagen") || "/comida.png";
 
   const [invitados, setInvitados] = useState("2 Guests");
   const [guardado, setGuardado] = useState(false);
@@ -51,30 +49,45 @@ export default function VistaDetalle() {
 
       <div className="vista-detalle__cuerpo">
         <h1 className="vista-detalle__titulo">{titulo}</h1>
-        <p className="vista-detalle__ubicacion">📍 {ubicacion}</p>
+        <p
+          className="vista-detalle__ubicacion"
+          style={{ display: "flex", alignItems: "center", gap: 6 }}
+        >
+          <img src="/location.svg" alt="Ubicación" width={14} height={14} />
+          <span>{ubicacion}</span>
+        </p>
 
         <div className="vista-detalle__acciones">
-          <PillAccion icono="↗" texto="Share" />
+          <PillAccion icono="/subir.svg" texto="Share" />
           <PillAccion
-            icono={guardado ? "❤️" : "🤍"}
+            icono={guardado ? "/heartrojo.svg" : "/heart.svg"}
             texto={guardado ? "Saved" : "Save"}
             onClick={() => setGuardado(!guardado)}
           />
-          <PillAccion icono="🏅" texto="100pts" />
+          <PillAccion icono="/medalla.png" texto="100pts" />
         </div>
 
         <div className="vista-detalle__filtros">
-          <select
-            className="vista-detalle__select"
-            value={invitados}
-            onChange={(e) => setInvitados(e.target.value)}
+          <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+            <img src="/grupo_personas.svg" alt="Invitados" width={18} height={18} />
+            <select
+              className="vista-detalle__select"
+              value={invitados}
+              onChange={(e) => setInvitados(e.target.value)}
+            >
+              <option value="1 Guest">1 Guest</option>
+              <option value="2 Guests">2 Guests</option>
+              <option value="4 Guests">4 Guests</option>
+              <option value="6 Guests">6 Guests</option>
+            </select>
+          </div>
+          <span
+            className="vista-detalle__fecha"
+            style={{ display: "flex", alignItems: "center", gap: 6 }}
           >
-            <option value="1 Guest">👥 1 Guest</option>
-            <option value="2 Guests">👥 2 Guests</option>
-            <option value="4 Guests">👥 4 Guests</option>
-            <option value="6 Guests">👥 6 Guests</option>
-          </select>
-          <span className="vista-detalle__fecha">📅 Today</span>
+            <img src="/calendar.svg" alt="Fecha" width={16} height={16} />
+            <span>Today</span>
+          </span>
         </div>
 
         <GrillaHorarios
