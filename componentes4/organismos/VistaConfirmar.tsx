@@ -8,16 +8,20 @@ import DatoResumen from "../atomos/DatoResumen";
 import ModalPuntos from "../moleculas/ModalPuntos";
 import "./VistaConfirmar.css";
 
+const API_URL = "https://TU_URL_DE_MOCKAPI.mockapi.io/api/v1";
+
 export default function VistaConfirmar() {
   const router = useRouter();
   const params = useSearchParams();
   const [mostrarModal, setMostrarModal] = useState(false);
+  const [guardando, setGuardando] = useState(false);
 
   const titulo = params.get("titulo") || "Leceister Square kitchen";
   const ubicacion = params.get("ubicacion") || "31-36 Leicester Square, England";
   const imagen = params.get("imagen") || "/comida.png";
   const invitados = params.get("invitados") || "2 Guests";
   const fecha = params.get("fecha") || "Wed, July 18";
+  const hora = params.get("hora") || "7:00 pm";
 
   const nombre = params.get("nombre") || "Adah Jonathan Uchenna";
   const email = params.get("email") || "jonathanadah11@gmail.com";
@@ -26,6 +30,35 @@ export default function VistaConfirmar() {
   const solicitud =
     params.get("solicitud") ||
     "Please, I do not want a seat close to an Air-Conditioner if you have any as I have friends who are allergic to cold.";
+
+  const handleReservar = async () => {
+    setGuardando(true);
+    try {
+      await fetch(`${API_URL}/reservas`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          titulo,
+          ubicacion,
+          imagen,
+          invitados,
+          fecha,
+          hora,
+          nombre,
+          email,
+          telefono,
+          ocasion,
+          solicitud,
+        }),
+      });
+      setMostrarModal(true);
+    } catch (err) {
+      console.error("Error guardando reserva:", err);
+      alert("No se pudo guardar la reserva. Revisa tu URL de MockAPI.");
+    } finally {
+      setGuardando(false);
+    }
+  };
 
   return (
     <main className="vista-confirmar">
@@ -65,8 +98,9 @@ export default function VistaConfirmar() {
           onClick={() => router.back()}
         />
         <BotonMorado
-          texto="Reserve Now"
-          onClick={() => setMostrarModal(true)}
+          texto={guardando ? "Saving..." : "Reserve Now"}
+          disabled={guardando}
+          onClick={handleReservar}
         />
       </div>
 
