@@ -1,0 +1,16 @@
+.boton-horario {
+  background-color: #3b0a75;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  transition: opacity 0.15s;
+}
+
+.boton-horario:hover {
+  opacity: 0.88;
+}

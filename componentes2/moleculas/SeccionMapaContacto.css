@@ -1,0 +1,65 @@
+.mapa-contacto {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mapa-contacto__titulo {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.mapa-contacto__descripcion {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #666666;
+}
+
+.mapa-contacto__mapa {
+  position: relative;
+  width: 100%;
+  height: 165px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #e6efe6;
+  border: 1px solid #dddddd;
+}
+
+.mapa-contacto__iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.mapa-contacto__badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(30, 30, 30, 0.85);
+  color: #ffffff;
+  font-size: 11px;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.mapa-contacto__lista {
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.mapa-contacto__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 14px;
+  font-size: 13px;
+  color: #3b0a75;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.mapa-contacto__item:last-child {
+  border-bottom: none;
+}

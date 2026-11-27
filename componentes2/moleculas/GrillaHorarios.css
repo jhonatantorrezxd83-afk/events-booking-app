@@ -1,0 +1,16 @@
+.grilla-horarios {
+  margin-top: 18px;
+}
+
+.grilla-horarios__titulo {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666666;
+  margin-bottom: 12px;
+}
+
+.grilla-horarios__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
