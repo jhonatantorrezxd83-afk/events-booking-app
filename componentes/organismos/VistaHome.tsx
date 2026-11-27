@@ -7,7 +7,7 @@ import BarraNavegacionInferior from "../moleculas/BarraNavegacionInferior";
 import { Evento } from "../moleculas/TarjetaEvento";
 import "./VistaHome.css";
 
-const API_URL = "https://TU_URL_DE_MOCKAPI.mockapi.io/api/v1";
+const API_URL = "https://6b097b7e6a4ecd58b007709c.mockapi.io/api/v1";
 
 export default function VistaHome() {
   const [eventos, setEventos] = useState<Evento[]>([]);

@@ -8,7 +8,7 @@ import DatoResumen from "../atomos/DatoResumen";
 import ModalPuntos from "../moleculas/ModalPuntos";
 import "./VistaConfirmar.css";
 
-const API_URL = "https://TU_URL_DE_MOCKAPI.mockapi.io/api/v1";
+const API_URL = "https://6b097b7e6a4ecd58b007709c.mockapi.io/api/v1";
 
 export default function VistaConfirmar() {
   const router = useRouter();
@@ -54,7 +54,7 @@ export default function VistaConfirmar() {
       setMostrarModal(true);
     } catch (err) {
       console.error("Error guardando reserva:", err);
-      alert("No se pudo guardar la reserva. Revisa tu URL de MockAPI.");
+      alert("No se pudo guardar la reserva.");
     } finally {
       setGuardando(false);
     }
