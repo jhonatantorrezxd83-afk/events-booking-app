@@ -1,0 +1,27 @@
+.campo-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo-texto__label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #222222;
+}
+
+.campo-texto__input {
+  width: 100%;
+  border: 1px solid #e2e2e2;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 13px;
+  color: #111111;
+  background-color: #fafafa;
+  outline: none;
+}
+
+.campo-texto__input:focus {
+  border-color: #3b0a75;
+  background-color: #ffffff;
+}

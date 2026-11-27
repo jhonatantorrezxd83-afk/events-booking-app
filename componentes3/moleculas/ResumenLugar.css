@@ -1,0 +1,36 @@
+.resumen-lugar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 0 18px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.resumen-lugar__img {
+  width: 82px;
+  height: 76px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.resumen-lugar__info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.resumen-lugar__titulo {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.resumen-lugar__meta {
+  font-size: 12px;
+  color: #666666;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}

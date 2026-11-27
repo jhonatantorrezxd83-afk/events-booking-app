@@ -1,0 +1,17 @@
+.boton-morado {
+  width: 100%;
+  background-color: #3b0a75;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.boton-morado:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
